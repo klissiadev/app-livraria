@@ -1,13 +1,14 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Logo = () => {
   return (
-    <a href="#">
-        <h1 className='logo'>
-            <span>Editora OnceuponLib</span>
-        </h1>
-    </a>
+    <Link to='/'>
+      <h1 className='logo'>
+        <span>Editora Onceuponlib</span>
+      </h1>
+    </Link>
   )
 }
 

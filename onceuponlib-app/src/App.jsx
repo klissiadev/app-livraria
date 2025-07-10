@@ -1,13 +1,17 @@
 import './App.css';
 import Topo from './components/Topo';
-import Principal from './components/Principal';
 import Rodape from './components/Rodape';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Route, Routes, useParams } from 'react-router-dom';
+import Home from './components/Home';
 import Programacao from './components/Programacao';
 import Catalogo from './components/Catalogo';
 import NotFound from './components/NotFound';
+import Frontend from './components/Frontend';
+import Design from './components/Design';
+import Livro from './components/Livro';
+import Compra from './components/Compra';
 
 const LivroRouterHandler = ({livros}) => {
   const {livroSlug} = useParams();
@@ -15,6 +19,13 @@ const LivroRouterHandler = ({livros}) => {
   if(!livro) return <NotFound/>
 
   return <Livro livro={livro}/>
+}
+const CompraRouterHandler = ({livros}) => {
+  const {livroSlug} = useParams();
+  const livro = livros.find(l=> l.slug === livroSlug);
+  if(!livro) return <NotFound/>
+
+  return <Compra livro={livro}/>
 }
 
 const App = () =>{
@@ -48,7 +59,8 @@ const App = () =>{
           <Route path="/livro/:livroSlug" 
           element={<LivroRouterHandler livros = {livros}/>}
           />
-          <Route path="/notfound" element={<NotFound/>}/>
+          <Route path="/compra/:livroSlug" element={<CompraRouterHandler livros = {livros}/>}/>
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Rodape/>
