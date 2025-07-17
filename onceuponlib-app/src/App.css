@@ -1,6 +1,7 @@
 html {
   font-size: 16px;
   box-sizing: border-box;
+  width: 100%;
 }
 *,
 *:before,
@@ -10,6 +11,13 @@ html {
 body {
   margin: 0;
   font: 1rem sans-serif;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
 }
 h1,
 h2,
@@ -64,6 +72,7 @@ ul {
 .principal a {
   color: #8d7c71;
   text-decoration: none;
+  width: 100%;
 }
 .thumb img {
   display: block;
@@ -74,11 +83,13 @@ ul {
   text-align: center;
   background: #d9d9d9;
   padding: 1px 0;
+  width: 100%;
 }
 .topo {
   margin-bottom: 4px;
 }
 .principal {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -152,13 +163,6 @@ ul {
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
-.botao:hover {
-  background-color: #8d7c71;     /* Tom mais escuro no hover */
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
 .compra-select {
   width: 30%;
   padding: 12px;
@@ -182,4 +186,58 @@ ul {
   border-radius: 6px;
   color: #8d7c71;
   font-weight: 500;
+}
+.form-cartao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Padronizar os campos do formulário */
+.form-cartao input {
+  width: 250px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #bda89b;
+  color: #fff;
+}
+
+/* Centralizar o botão de pagamento */
+.form-cartao button {
+  margin-top: 10px;
+  align-self: center;
+  background-color: #786b63;
+}
+
+/* Centralizar tudo da compra */
+.compra-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: auto;
+}
+
+/* Alinhamento e espaçamento geral do botão de finalizar compra */
+.botao {
+  margin-top: 20px;
+  display: block;
+  align-self: center;
+  background-color: #8d7c71;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.pix{
+  margin-left: 50%;
 }

@@ -12,6 +12,7 @@ import Frontend from './components/Frontend';
 import Design from './components/Design';
 import Livro from './components/Livro';
 import Compra from './components/Compra';
+import Pagamento from './components/Pagamento';
 
 const LivroRouterHandler = ({livros}) => {
   const {livroSlug} = useParams();
@@ -60,6 +61,7 @@ const App = () =>{
           element={<LivroRouterHandler livros = {livros}/>}
           />
           <Route path="/compra/:livroSlug" element={<CompraRouterHandler livros = {livros}/>}/>
+          <Route path="/pagamento" element={<Pagamento />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
