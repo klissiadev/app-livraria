@@ -5,6 +5,7 @@ import Livro from './Livro'
 const Programacao = ({livros}) => (
   <main className='principal'>
     <h2>Categoria Programação</h2>
+    <div className="livros">
     {livros
       .filter((cat) => cat.categoria === "programacao")
       .map((livro) =>(
@@ -32,6 +33,7 @@ const Programacao = ({livros}) => (
             ))}
         </div>
       ))}
+      </div>
     </main>
 )
 

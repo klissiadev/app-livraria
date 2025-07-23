@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Catalogo = ({livros}) => {
   return (
     <main className="principal">
+      <div className="livros">
       <h2>Categoria Frontend</h2>
       <ol>
         {livros
@@ -34,6 +35,7 @@ const Catalogo = ({livros}) => {
           </li>
         ))}
       </ol>
+      </div>
     </main>
   );
 };

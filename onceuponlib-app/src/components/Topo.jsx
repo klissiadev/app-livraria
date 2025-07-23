@@ -5,8 +5,8 @@ import Navegacao from './Navegacao';
 const Topo = () => {
   return (
    <header className='topo'>
-        <Logo/>
-        <Navegacao/>
+      <Logo/>
+      <Navegacao/>
    </header>
   );
 };

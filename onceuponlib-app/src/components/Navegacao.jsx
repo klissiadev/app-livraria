@@ -3,8 +3,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const linkCorrente =({isActive}) => ({
-  color:isActive ? "#cacaca" : "inherit",
-  fontWeight: isActive ? "bold" : "normal",
+  color:isActive ? "#4d3d2fff" : "#f8f2f2",
+  fontWeight: isActive ? "700" : "600",
 });
 
 const Navegacao = () => (
@@ -56,6 +56,14 @@ const Navegacao = () => (
           style={linkCorrente}          
         >
           Catálogo
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to='/carrinho'
+          style={linkCorrente}
+        >
+          Carrinho
         </NavLink>
       </li>
     </ul>

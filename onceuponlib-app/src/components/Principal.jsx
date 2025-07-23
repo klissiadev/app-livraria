@@ -4,7 +4,7 @@ import Home from './Home';
 const Principal = () => {
   return (
     <main className="principal">
-        <Home/>
+      <Home/>
     </main>
   );
 };

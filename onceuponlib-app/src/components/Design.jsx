@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const Design = ({livros}) => (
     <main className='principal'>
       <h2>Categoria Design</h2>
+      <div className="livros">
       {livros
         .filter((cat) => cat.categoria === "design")
         .map((livro) =>(
@@ -31,6 +32,7 @@ const Design = ({livros}) => (
               ))}
           </div>
         ))}
+        </div>
     </main>
   );
 export default Design;
